@@ -1,0 +1,15 @@
+:root {
+  /* Colors  */
+  --dark_blue: #0a3871;
+  --gray: #495057;
+  --white: #fff;
+  --ligh_blue: #f3f5fc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--ligh_blue);
+  font-family: 'Inter', sans-serif;
+}
