@@ -35,6 +35,7 @@ function encriptButton(event) {
 }
 
 function descripButton(event){
+    event.preventDefault()
     console.log('desencriptando mensaje');
     
     // let result = result_textarea.value;
