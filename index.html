@@ -18,30 +18,38 @@
       <a href="#"><img src="./assets/Vector.png" alt="" srcset="" /></a>
     </header>
     <div class="main_wrap">
-      <form action="">
-        <textarea placeholder="Ingrese el texto aqui"></textarea>
+      <form>
+        <textarea
+          class="input_user"
+          placeholder="Ingrese el texto aqui"
+        ></textarea>
         <div class="wrap">
           <div class="message_form">
             <img src="./assets/Group.svg" alt="" srcset="" />
             <span>Solo letras minúsculas y sin acentos</span>
           </div>
           <div class="group_buttons">
-            <button class="encriptar_btn">Encriptar</button>
-            <button class="desencriptar_btn">Desencriptar</button>
+            <button type="submit" class="encriptar_btn">Encriptar</button>
           </div>
         </div>
       </form>
+      <button class="desencriptar_btn">Desencriptar</button>
       <section class="result_message">
-        <img
-          class="b_padding"
-          src="./assets/Muñeco.svg"
-          alt="vector muñeco y una lupa"
-        />
-        <h2 class="b_padding">Ningún mensaje fue encontrado</h2>
-        <p class="b_padding">
-          Ingresa el texto que desees encriptar o desencriptar.
-        </p>
+        <textarea class="hidden_content result_message_text"></textarea>
+        <button class="result_message_button hidden_content">Copiar</button>
+        <div class="wrap_result_message">
+          <img
+            class="b_padding"
+            src="./assets/Muñeco.svg"
+            alt="vector muñeco y una lupa"
+          />
+          <h2 class="b_padding">Ningún mensaje fue encontrado</h2>
+          <p class="b_padding">
+            Ingresa el texto que desees encriptar o desencriptar.
+          </p>
+        </div>
       </section>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
