@@ -97,6 +97,20 @@ button {
 .result_message img {
   display: none;
 }
+.hidden_content {
+  display: none;
+}
+.result_message_text {
+  color: var(--gray);
+}
+.result_message_button {
+  color: var(--dark_blue);
+  background-color: transparent;
+  border: 1px solid var(--dark_blue);
+}
+.vissible {
+  display: block;
+}
 
 @media (min-width: 768px) {
   body {
@@ -138,5 +152,8 @@ button {
   }
   .b_padding {
     padding-bottom: 1em;
+  }
+  .result_message_button {
+    margin-top: 12em;
   }
 }
