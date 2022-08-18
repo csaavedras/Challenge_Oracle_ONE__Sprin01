@@ -2,6 +2,7 @@ const result_textarea = document.querySelector('.result_message_text');
 const result_message = document.querySelector('.result_message');
 const wrap_result = document.querySelector('.wrap_result_message');
 const userTextarea = document.querySelector('.input_user');
+const error_message = document.querySelector('.message_form');
 
 const encript_button = document.querySelector('.encriptar_btn');
 const desencript_button = document.querySelector('.desencriptar_btn');
@@ -17,10 +18,15 @@ function encriptButton(event) {
       // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
       event.preventDefault()
       let data_user = userTextarea.value;
-      // Rules of secret code
-     //   const charArr = ['e', 'i', 'a', 'o', 'u'];
-     //   const codeArr = ['enter', 'imes', 'ai', 'ober', 'ufat'];
-      let newText = data_user.replace(/e/g, 'enter');
+
+   const regex = /[A-Z]/g;
+   const found = data_user.match(regex);
+
+   if(found){
+    visibleContent(error_message)
+   } else {
+    console.log("texto valido!")
+    let newText = data_user.replace(/e/g, 'enter');
       newText = newText.replace(/i/g, 'imes');
       newText = newText.replace(/a/g, 'ai');
       newText = newText.replace(/o/g, 'ober');
@@ -30,6 +36,11 @@ function encriptButton(event) {
       result_textarea.innerText = newText;
       visibleContent(result_textarea);
       visibleContent(copy_button);
+   }
+      // Rules of secret code
+      //   const charArr = ['e', 'i', 'a', 'o', 'u'];
+      //   const codeArr = ['enter', 'imes', 'ai', 'ober', 'ufat']; 
+      
       
 }
 function descripButton(event){
@@ -51,6 +62,7 @@ function copyText(){
     let data_user = result_textarea.value;
     const cb = navigator.clipboard;
     cb.writeText(data_user)
+    alert("Texto copiado ✅!")
 }
 //  Functions for Hidden and visible content display 
 function hiddenContent(content){
@@ -59,7 +71,19 @@ function hiddenContent(content){
 function visibleContent(content){
     return content.style.display = 'block';
 }
+// Functions for validation check lowercase letters
+// function hasLowerCase(str){
+//    const regex = /[A-Z]/g;
+//    const found = str.match(regex);
+//    console.log(found);
 
+//    if(found){
+//     visibleContent(error_message)
+//    } else {
+//     console.log("texto valido!")
+//    }
+
+// }
 // **Requisitos:**
 // - Debe funcionar solo con letras minúsculas
 // - No deben ser utilizados letras con acentos ni caracteres especiales
