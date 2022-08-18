@@ -53,6 +53,9 @@ textarea {
   align-items: center;
   gap: 0.5em;
   margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 1em;
+  border: 1px solid red;
 }
 span {
   font-size: 0.75rem;
