@@ -4,13 +4,18 @@
   --gray: #495057;
   --white: #fff;
   --ligh_blue: #f3f5fc;
+  /* new Colors */
+  --dark: #161819;
+  --dark_gray: #242529;
+  --btn_primary: #6deab4;
+  --message_form: #e5e5e5;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--ligh_blue);
+  background-color: var(--dark);
   font-family: 'Inter', sans-serif;
   padding: 2em 1em;
   height: 100vh;
@@ -32,20 +37,29 @@ textarea {
   resize: none;
   font-size: 2rem;
   font-weight: 400;
-  color: var(--dark_blue);
+  color: var(--white);
 }
 ::placeholder {
-  color: var(--dark_blue);
+  color: var(--btn_primary);
+}
+.logo_cisaa {
+  transition: transform 250ms;
+}
+.logo_cisaa:hover {
+  transform: translateY(-10px);
 }
 .message_form {
   display: flex;
   align-items: center;
   gap: 0.5em;
   margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 1em;
+  border: 1px solid red;
 }
 span {
   font-size: 0.75rem;
-  color: var(--gray);
+  color: var(--white);
   font-weight: 400;
 }
 .group_buttons {
@@ -59,39 +73,44 @@ button {
   border-radius: 1.5rem;
   padding: 1.5em 6em;
   font-size: 1rem;
+  font-weight: bold;
+  transition: transform 250ms;
+}
+button:hover {
+  transform: translateY(-10px);
 }
 .encriptar_btn {
-  background-color: var(--dark_blue);
-  color: var(--white);
+  background-color: var(--btn_primary);
+  color: var(--dark);
 }
 .desencriptar_btn {
-  border: 1px solid var(--dark_blue);
+  border: 1px solid #411530;
   color: var(--dark_blue);
-  background-color: transparent;
+  background-color: var(--white);
 }
 .result_message {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
+  background-color: var(--dark_gray);
   border-radius: 2rem;
+  border: 1px solid var(--text_primary);
   padding: 0.5em 3em;
   margin-top: 3em;
   height: 186px;
   text-align: center;
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 .result_message h2 {
   padding-top: 0;
   margin-top: 0;
-  color: #343a40;
+  color: var(--white);
   font-size: 1.5rem;
   font-weight: 700;
 }
 .result_message p {
   margin: 0;
-  color: var(--gray);
+  color: var(--white);
   font-size: 1rem;
 }
 .result_message img {
@@ -101,15 +120,30 @@ button {
   display: none;
 }
 .result_message_text {
-  color: var(--gray);
+  color: var(--white);
 }
 .result_message_button {
-  color: var(--dark_blue);
+  /* color: var(--text_primary);
   background-color: transparent;
-  border: 1px solid var(--dark_blue);
+  border: 1px solid var(--text_primary); */
+  background-color: transparent;
+  border: 1px solid var(--btn_primary);
+  color: var(--btn_primary);
 }
 .vissible {
   display: block;
+}
+
+footer {
+  text-align: center;
+  color: var(--white);
+  margin-top: 2em;
+  font-weight: bold;
+}
+
+footer p a {
+  text-decoration: none;
+  color: var(--btn_primary);
 }
 
 @media (min-width: 768px) {

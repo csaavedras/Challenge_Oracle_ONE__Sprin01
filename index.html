@@ -15,7 +15,12 @@
   </head>
   <body>
     <header>
-      <a href="#"><img src="./assets/Vector.png" alt="" srcset="" /></a>
+      <a href="https://github.com/csaavedras" target="_blank"
+        ><img
+          class="logo_cisaa"
+          src="./assets/dev_cisaa_logo.svg"
+          alt="logo camilo saavedra frontend developer"
+      /></a>
     </header>
     <div class="main_wrap">
       <form>
@@ -24,8 +29,11 @@
           placeholder="Ingrese el texto aqui"
         ></textarea>
         <div class="wrap">
-          <div class="message_form">
-            <img src="./assets/Group.svg" alt="" srcset="" />
+          <div class="message_form hidden_content">
+            <img
+              src="./assets/bi_exclamation-circle-fill_white.svg"
+              alt="logo de alerta"
+            />
             <span>Solo letras minúsculas y sin acentos</span>
           </div>
           <div class="group_buttons">
@@ -50,11 +58,13 @@
       </form>
       <section class="result_message">
         <textarea class="hidden_content result_message_text"></textarea>
-        <button class="result_message_button hidden_content">Copiar</button>
+        <button class="copy_button result_message_button hidden_content">
+          Copiar
+        </button>
         <div class="wrap_result_message">
           <img
             class="b_padding"
-            src="./assets/Muñeco.svg"
+            src="./assets/Muñeco_secondary.svg"
             alt="vector muñeco y una lupa"
           />
           <h2 class="b_padding">Ningún mensaje fue encontrado</h2>
@@ -64,6 +74,12 @@
         </div>
       </section>
     </div>
+    <footer>
+      <p>
+        Made with ❤️ by
+        <a href="https://github.com/csaavedras" target="_blank"> csaavedras</a>
+      </p>
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>
