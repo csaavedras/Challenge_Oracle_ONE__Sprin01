@@ -62,7 +62,6 @@ function copyText(){
     let data_user = result_textarea.value;
     const cb = navigator.clipboard;
     cb.writeText(data_user)
-    alert("Texto copiado ✅!")
 }
 //  Functions for Hidden and visible content display 
 function hiddenContent(content){
