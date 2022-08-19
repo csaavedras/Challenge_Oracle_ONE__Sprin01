@@ -70,19 +70,7 @@ function hiddenContent(content){
 function visibleContent(content){
     return content.style.display = 'block';
 }
-// Functions for validation check lowercase letters
-// function hasLowerCase(str){
-//    const regex = /[A-Z]/g;
-//    const found = str.match(regex);
-//    console.log(found);
 
-//    if(found){
-//     visibleContent(error_message)
-//    } else {
-//     console.log("texto valido!")
-//    }
-
-// }
 // **Requisitos:**
 // - Debe funcionar solo con letras minúsculas
 // - No deben ser utilizados letras con acentos ni caracteres especiales
