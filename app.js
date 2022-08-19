@@ -40,7 +40,7 @@ function encriptButton(event) {
         userTextarea.value = "";
     
     } else {
-        visibleContent(error_message)
+        error_message.style.display = 'flex';
     }
 
       // Rules of secret code
