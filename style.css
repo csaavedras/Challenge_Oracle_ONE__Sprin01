@@ -18,7 +18,7 @@ body {
   background-color: var(--dark);
   font-family: 'Inter', sans-serif;
   padding: 2em 1em;
-  height: 100vh;
+  /* height: 100vh; */
 }
 header {
   padding-bottom: 4em;
@@ -96,10 +96,15 @@ button:hover {
   background-color: var(--dark_gray);
   border-radius: 2rem;
   border: 1px solid var(--text_primary);
-  padding: 0.5em 3em;
+  padding: 1em 3em;
   margin-top: 3em;
-  height: 186px;
+  height: 40em;
   text-align: center;
+}
+.result_message textarea {
+  height: 20em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
 }
 .result_message h2 {
   padding-top: 0;
@@ -123,9 +128,6 @@ button:hover {
   color: var(--white);
 }
 .result_message_button {
-  /* color: var(--text_primary);
-  background-color: transparent;
-  border: 1px solid var(--text_primary); */
   background-color: transparent;
   border: 1px solid var(--btn_primary);
   color: var(--btn_primary);
