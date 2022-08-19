@@ -123,9 +123,6 @@ button:hover {
   color: var(--white);
 }
 .result_message_button {
-  /* color: var(--text_primary);
-  background-color: transparent;
-  border: 1px solid var(--text_primary); */
   background-color: transparent;
   border: 1px solid var(--btn_primary);
   color: var(--btn_primary);
