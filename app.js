@@ -10,7 +10,7 @@ const copy_button = document.querySelector('.copy_button');
 
 //Event Listener for Buttons
 encript_button.addEventListener('click', encriptButton);
-desencript_button.addEventListener('click', descripButton);
+desencript_button.addEventListener('click', decrypt);
 copy_button.addEventListener('click', copyText);
 
 // Functions for encryption and decrypt
@@ -22,28 +22,32 @@ function encriptButton(event) {
    const regex = /[A-Z]/g;
    const found = data_user.match(regex);
 
-   if(found){
-    visibleContent(error_message)
-   } else {
-    console.log("texto valido!")
-    let newText = data_user.replace(/e/g, 'enter');
-      newText = newText.replace(/i/g, 'imes');
-      newText = newText.replace(/a/g, 'ai');
-      newText = newText.replace(/o/g, 'ober');
-      newText = newText.replace(/u/g, 'ufat');
-      //Visible and hidden content
-      hiddenContent(wrap_result);
-      result_textarea.innerText = newText;
-      visibleContent(result_textarea);
-      visibleContent(copy_button);
-   }
+    if(!found){
+        console.log("texto valido!")
+        let newText = data_user.replace(/e/g, 'enter');
+        newText = newText.replace(/i/g, 'imes');
+        newText = newText.replace(/a/g, 'ai');
+        newText = newText.replace(/o/g, 'ober');
+        newText = newText.replace(/u/g, 'ufat');
+        //Visible and hidden content
+        hiddenContent(wrap_result);
+        result_textarea.innerText = newText;
+        visibleContent(result_textarea);
+        visibleContent(copy_button);
+        hiddenContent(error_message);   
+        
+        //clean textarea value
+        userTextarea.value = "";
+    
+    } else {
+        visibleContent(error_message)
+    }
+
       // Rules of secret code
       //   const charArr = ['e', 'i', 'a', 'o', 'u'];
-      //   const codeArr = ['enter', 'imes', 'ai', 'ober', 'ufat']; 
-      
-      
-}
-function descripButton(event){
+      //   const codeArr = ['enter', 'imes', 'ai', 'ober', 'ufat'];   
+} //decrypt
+function decrypt(event){
     event.preventDefault()  
     // let result = result_textarea.value;
     let result = userTextarea.value;
@@ -57,6 +61,10 @@ function descripButton(event){
     result_textarea.innerText = newText;
     visibleContent(result_textarea);
     visibleContent(copy_button);
+
+
+     //clean textarea value
+    userTextarea.value = "";
 } 
 function copyText(){
     let data_user = result_textarea.value;
